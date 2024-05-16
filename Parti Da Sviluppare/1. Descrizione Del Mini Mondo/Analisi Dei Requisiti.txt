@@ -1,14 +1,23 @@
-Il progetto consiste nella creazione di un sistema completo per la gestione di una clinica medica, basato su un database, che permetta di monitorare dettagliatamente ogni aspetto del processo clinico.
+Il progetto consiste nella creazione di un sistema per la gestione di una clinica medica, che permetta di monitorare dettagliatamente ogni aspetto del processo clinico.
+Questo progetto garantisce una gestione efficiente dei pazienti, degli appuntamenti, dei medici, dei servizi erogati e delle relative fatturazioni.
 
-Le entità principali sono:
-1. Paziente: Questa entità contiene informazioni dettagliate sul paziente, tra cui il nome, il cognome, il numero di telefono, l'email e qualsiasi allergia o condizione medica pregressa che possa essere rilevante per la sua cura.
+Il sistema sarà composto da:
+- Paziente: Individuo che usufruisce dei servizi della struttura medica.
+- Medico: Professionista medico che eroga servizi ai pazienti.
+- Appuntamento: Un incontro pianificato tra un paziente e un medico.
+- Servizio: Servizio erogato da un medico ai pazienti.
+- Trattamento: Trattamento prescritto da un medico a un paziente.
+- Fattura: Fattura emessa per i servizi erogati.
 
-2. Medico: Rappresenta il personale medico che opera nella clinica. Ogni medico è caratterizzato da informazioni come nome, cognome, specializzazione, numero di registrazione medica e orario di lavoro. Inoltre, vengono monitorate le valutazioni (feedback) ricevute dal medico.
+L'obiettivo principale del progetto è sviluppare:
+- Gestione dei pazienti: Archiviazione dettagliata delle informazioni dei pazienti (nome, codice fiscale, contatti e dati sanitari)
+- Prenotazioni degli appuntamenti: Gestione delle prenotazioni degli appuntamenti (con registrazione della data, dell'ora e del motivo della visita)
+- Gestione dei medici: Archiviazione delle informazioni dei medici (nome, specializzazione e dettagli di contatto)
+- Erogazione dei servizi: Registro dei servizi erogati dai medici (nome del servizio, costo e durata)
+- Trattamenti prescritti: Archiviazione dei trattamenti prescritti dai medici ai pazienti (trattamento, durata e obiettivi terapeutici)
+- Fatturazione dei servizi: Generazione e gestione delle fatture per i servizi erogati( modalità di pagamento e stato di pagamento)
 
-3. Servizio Medico: Questa entità descrive i servizi offerti dalla clinica, fornendo dettagli sul nome del servizio, una breve descrizione, il costo e la durata prevista di ciascun servizio.
-
-4. Fattura: Rappresenta i documenti di fatturazione emessi dalla clinica. Ogni fattura contiene informazioni come la data di emissione, il totale dovuto, lo stato del pagamento e la modalità di pagamento selezionata.
-
-5. Prescrizione: Questa entità tiene traccia delle prescrizioni mediche fatte dai medici ai pazienti. Ogni prescrizione include dettagli come il nome del farmaco, le istruzioni per il dosaggio, la data di prescrizione e eventuali note mediche. È collegata al medico che ha emesso la prescrizione e al paziente che la riceve.
-
-6. Appuntamento: Rappresenta gli incontri pianificati tra pazienti e medici. Ogni appuntamento è caratterizzato dalla data e dall'ora della visita, oltre al motivo specifico dell'incontro. È collegato al medico che ha programmato l'appuntamento e al paziente che parteciperà.
+Descrizione delle relazioni chiave:
+I pazienti possono richiedere più appuntamenti presso la clinica, con la possibilità che ciascun appuntamento comprenda una serie di servizi erogati.
+I medici (identificati attraverso la loro registrazione medica) sono in grado di erogare una vasta gamma di servizi, ciascuno dei quali con una moltitudine di trattamenti specifici.
+Alla conclusione del percorso medico, viene inviata al cliente una fattura per ogni servizio richiesto alla clinica
