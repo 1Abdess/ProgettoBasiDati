@@ -1,0 +1,33 @@
+-- Popolamento tabella MEDICO
+INSERT INTO `ClinicaMedicaDB`.`MEDICO` (REG_MEDICA, NOME, COGNOME, SPECIALIZZAZIONE, TELEFONO, SESSO) VALUES
+('XXXXXXXXXXXXXXX1', 'Marco', 'Rossi', 'Cardiologia', '+39XXXXXXXXX1', 'M'),
+('XXXXXXXXXXXXXXX2', 'Giulia', 'Bianchi', 'Dermatologia', '+39XXXXXXXXX2', 'F'),
+('XXXXXXXXXXXXXXX3', 'Tommaso', 'Verdi', 'Prevenzione', '+39XXXXXXXXX3', 'M');
+
+-- Popolamento tabella PAZIENTE
+INSERT INTO `ClinicaMedicaDB`.`PAZIENTE` (CF, NOME, COGNOME, EMAIL, TELEFONO, SESSO, INFORMAZIONI) VALUES
+('XXXXXXXXXXXXXX01', 'Copernico', 'Carpeggiani', 'Copernico.Carpeggiani@example.com', '+39XXXXXXXX01', 'M', 'Allergia polline'),
+('XXXXXXXXXXXXXX02', 'Marica', 'Binchini', 'Marica.Binchini@example.com', '+39XXXXXXXX02', 'F', 'Allergia alle noccioline'),
+('XXXXXXXXXXXXXX03', 'Antonio', 'Esposito', 'Antonio.Esposito@example.com', '+39XXXXXXXX03', 'M', 'Intollerante al lattosio');
+
+-- Popolamento tabella SERVIZIO
+INSERT INTO `ClinicaMedicaDB`.`SERVIZIO` (NOME_SERVIZIO, DURATA, COSTO) VALUES
+('Visita cardiologica', 30, 50),
+('Pulizia del viso', 60, 70),
+('Vaccinazione pediatrica', 20, 30);
+
+-- Popolamento tabella TRATTAMENTO
+INSERT INTO `ClinicaMedicaDB`.`TRATTAMENTO` (NOME_TRATTAMENTO, DURATA, AVVERTENZE, OBBIETTIVI) VALUES
+('tachipirina', 15, "non esagerare",'prendere per 15 giorni la tachipirina. bere acqua.');
+
+-- Popolamento tabella APPUNTAMENTO
+INSERT INTO `ClinicaMedicaDB`.`APPUNTAMENTO` (MOTIVO, ORA, DATA, CF_PAZIENTE, TRATT_PROPOSTO, COD_SERVIZIO) VALUES
+('Controllo annuale', '09:00', '16/05/2024', 'XXXXXXXXXXXXXX01', 4, 1),
+('Trattamento viso', '15:30', '2024-05-22', 'XXXXXXXXXXXXXX03', 5, 2);
+
+-- Popolamento tabella FATTURA
+INSERT INTO `ClinicaMedicaDB`.`FATTURA` (MODALITA, STATO, DATA_PAGAMENTO, COD_SERVIZIO, CF_CLIENTE, TRATT_PROPOSTO) VALUES
+('Contanti', 'Non pagata', "16/05/2024", 1, 'XXXXXXXXXXXXXX01', 4),
+('Carta di credito', 'Pagata', "16/05/2024", 2, 'XXXXXXXXXXXXXX02', 5);
+
+
