@@ -20,4 +20,4 @@ L'obiettivo principale del progetto è sviluppare:
 Descrizione delle relazioni chiave:
 I pazienti possono richiedere più appuntamenti presso la clinica, con la possibilità che ciascun appuntamento comprenda una serie di servizi erogati.
 I medici (identificati attraverso la loro registrazione medica) sono in grado di erogare una vasta gamma di servizi, ciascuno dei quali con una moltitudine di trattamenti specifici.
-Alla conclusione del percorso medico, viene inviata al cliente una fattura per ogni servizio richiesto alla clinica
+Alla conclusione del percorso medico, viene inviata al cliente una fattura per ogni servizio richiesto alla clinica con il relativo trattamento proposto dal medico.
